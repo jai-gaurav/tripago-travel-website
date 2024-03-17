@@ -2,7 +2,7 @@
 ## Description
 Tripago is a 24hr hackathon project made with the intent of leveraging Generative AI and LLMs to streamline the trip planning process by adding functionality such as -
 1. Suggesting a trip plan after taking inputs about a few details from the user and then applying prompt engineering to get a cohesive itinerary plan
-2. Creating and itinerary for a travel plan that has been finalized with blank spaces instead of suggestions for omitted details to be shared with friends
+2. Creating an itinerary for a travel plan that has been finalized with blank spaces instead of suggestions for omitted details to be shared with friends
 3. An AI chatbot to answer all your travel related queries on the go
 ## Requirements
 Python Version: 3.10.13 (other versions might work but have not been tested)
