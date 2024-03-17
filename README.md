@@ -27,4 +27,6 @@ Python Version: 3.10.13 (other versions might work but have not been tested)
    ```
 8. Ctrl + Click the link in the output message to navigate to the website
 9. Plan your trip
-
+## Credits
+All frontend development was done by github user HimanshuKumarSah (Himanshu Kumar Sah)
+All backend development was done by github user jai-gaurav (Jai Gaurav)
