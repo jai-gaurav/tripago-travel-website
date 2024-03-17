@@ -21,12 +21,16 @@ Python Version: 3.10.13 (other versions might work but have not been tested)
    ```
    pip install -r requirements.txt
    ```
-7. Start the django server with the following command in terminal
+7. Run the command to run migration and add all tables
+   ```
+   python manage.py migrate
+   ```
+8. Start the django server with the following command in terminal
    ```
    python manage.py runserver
    ```
-8. Ctrl + Click the link in the output message to navigate to the website
-9. Plan your trip
+9. Ctrl + Click the link in the output message to navigate to the website
+10. Plan your trip
 ## Credits
 All backend development was done by github user jai-gaurav (Jai Gaurav)\
 All frontend development was done by github user HimanshuKumarSah (Himanshu Kumar Sah)
