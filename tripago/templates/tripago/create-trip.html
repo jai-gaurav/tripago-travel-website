@@ -1,0 +1,77 @@
+{% load static %}
+<html>
+    <head>
+        <title>Create Trip</title>
+        <link rel="stylesheet" href="{% static 'css/create-trip.css' %}">
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Create Trip</h1>
+            <form method="POST" autocomplete="off">
+                {% csrf_token %}
+                <div class="input-box">
+                    <input type="text" placeholder="Start Location" name="start_location" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Destination" name="destination" required>
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Budget" name="budget" step="0.05" required>
+                </div>
+                <div class="input-box">
+                    <input type="date" placeholder="Start Date" name="start_date" required>
+                </div>
+                <div class="input-box">
+                    <input type="date" placeholder="End Date" name="end_date" required>
+                </div>
+                <div class="input-box">
+                    <label for="mode_of_arrival">Mode of Arrival:</label>
+                    <select name="mode_of_arrival" required>
+                        <option value="Flight">Flight</option>
+                        <option value="Train">Train</option>
+                        <option value="Bus">Bus</option>
+                        <option value="Car">Car</option>
+                        <option value="Boat">Boat</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label for="stay_preference">Stay Preference:</label>
+                    <select name="stay_preference" required>
+                        <option value="Hotel">Hotel</option>
+                        <option value="Hostel">Hostel</option>
+                        <option value="Airbnb">Airbnb</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label for="activity_preference">Activity Preference:</label>
+                    <select name="activity_preference" required>
+                        <option value="Sightseeing">Sightseeing</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Relaxation">Relaxation</option>
+                        <option value="Business">Business</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Group Size" name="group_size" required>
+                </div>
+                <div class="input-box">
+                    <label for="mode_of_transport">Mode of Transport:</label>
+                    <select name="mode_of_transport" required>
+                        <option value="Flight">Flight</option>
+                        <option value="Train">Train</option>
+                        <option value="Bus">Bus</option>
+                        <option value="Car">Car</option>
+                        <option value="Boat">Boat</option>
+                        <option value="Bike">Bike</option>
+                        <option value="Walk">Walk</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <input type="submit" class="btn" value="Create Trip"></input>
+            </form>
+        </div>
+    </body>
+</html>

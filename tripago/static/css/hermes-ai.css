@@ -1,0 +1,100 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    background: url(https://image.cnbcfm.com/api/v1/image/107185268-1674841615778-gettyimages-1457910259-a7404995.jpeg?v=1684929601&w=1920&h=1080);
+}
+
+/* Container styles */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.header {
+    background-color: black; /* Transparent blue */
+    color: #fff;
+    padding: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+/* Content styles */
+.content {
+    padding: 20px;
+}
+
+/* Chat box styles */
+.chat-box {
+    margin-bottom: 20px;
+}
+
+.chat-box-header {
+    background-color: black; /* Transparent blue */
+    color: #fff;
+    padding: 10px 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.chat-box-header h2 {
+    font-size: 18px;
+}
+
+.chat-box-body {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+    min-height: 200px;
+}
+
+.chat-box-message {
+    margin-bottom: 10px;
+}
+
+.chat-box-footer {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.chat-box-footer input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chat-box-footer input[type="submit"] {
+    background-color: black; /* Transparent blue */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Response message styles */
+#response-message p {
+    background-color: rgba(233, 233, 233, 0.8); /* Semi-transparent light gray */
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}

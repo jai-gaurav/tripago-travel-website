@@ -1,0 +1,61 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Hermes AI Assistant</title>
+        <link rel="stylesheet" href="{% static 'css/hermes-ai.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <form id="chat-form" method="POST">
+                {% csrf_token %}
+                <div class="header">
+                    <h1>Hermes AI Assistant</h1>
+                </div>
+                <div class="content">
+                    <div class="chat-box">
+                        <div class="chat-box-header">
+                            <h2>Chat</h2>
+                        </div>
+                        <div class="chat-box-body">
+                            <div class="chat-box-message">
+                                <p>Hi, I'm Hermes, your AI assistant. How can I help you today?</p>
+                            </div>
+                        </div>
+                        <div class="chat-box-footer">
+                            <input type="text" id="chat-input" name="chat-prompt" placeholder="Type your message here...">
+                            <input type="submit" value="Send IT">
+                        </div>
+                    </div>
+                    <div class="chat-box">
+                        <div class="chat-box-header">
+                            <h2>Response</h2>
+                        </div>
+                        <div class="chat-box-body">
+                            <div class="chat-box-message" id="response-message">
+                                <!-- response messages are displayed here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#chat-form').submit(function(event){
+                    event.preventDefault();
+                    var formData = $(this).serialize();
+                    $.ajax({
+                        type: 'POST',
+                        url: '{% url "hermes-ai" %}',  // URL to your Django view
+                        data: formData,
+                        success: function(response){
+                            $('#response-message').html('<p>' + response.answer + '</p>');
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

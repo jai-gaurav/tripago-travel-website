@@ -1,0 +1,68 @@
+{% load static %}
+<html>
+    <head>
+        <title>Homepage</title>
+        <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    </head>
+    <body>
+    <a href="logout.html" target="_blank">
+        <button type="submit" class="but">Logout</button>
+    </a>
+    <a href="create-itinerary.html" target="_blank">
+        <button type="submit" class="bn">Create Itinerary</button>
+    </a>
+    <a href="create-trip.html" target="_blank">
+        <button type="submit" class="bnt">Create Trip</button>
+    </a>
+    <a href="hermes-ai.html" target="_blank">
+      <button type="submit" class="bntt">Hermes AI</button>
+  </a>
+    <main class="page-content">
+        <div class="card">
+          <div class="content">
+            <h2 class="title">France</h2>
+            <p class="copy">The country of Romance, Art & Food!</p>
+            <a href="france.html" target="_blank">
+                <button class="btn">View Trips</button>
+            </a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2 class="title">Spain</h2>
+            <p class="copy">Let the Spanish Cuisine and Culture take over and enjoy the scenic sites!</p>
+            <a href="spain.html" target="_blank">
+                <button class="btn">View Trips</button>
+            </a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2 class="title">United States</h2>
+            <p class="copy">The tall buildings and historic sites!</p>
+            <a href="usa.html" target="_blank">
+                <button class="btn">Book Now</button>
+            </a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h2 class="title">Switzerland</h2>
+            <p class="copy">Glittering mountains, ice filled snow caps, and scenic train rides!</p>
+            <a href="switzerland.html" target="_blank">
+                <button class="btn">Book Now</button>
+            </a>
+          </div>
+        </div>
+        <div class="card">
+            <div class="content">
+              <h2 class="title">Thailand</h2>
+              <p class="copy">Beaches, temples and food! A lot of it!</p>
+              <a href="thailand.html" target="_blank">
+                <button class="btn">Book Now</button>
+              </a>
+            </div>
+          </div>
+      </main>
+    </body>
+</html>

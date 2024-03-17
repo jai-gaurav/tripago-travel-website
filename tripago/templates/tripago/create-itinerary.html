@@ -1,0 +1,61 @@
+{% load static %}
+<html>
+    <head>
+        <title>Generate Trip Itinerary</title>
+        <link rel="stylesheet" href="{% static 'css/create-itinerary.css' %}">
+    </head>
+    <body>
+        <h1>Generate Trip Itinerary</h1>
+        <div class="wrapper">
+            <form method="POST" action="">
+                {% csrf_token %}
+                <h1>Create Itinerary</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Start Location" name="start_location" required>
+                    <i class='bx bx-child' ></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Destination" name="destination" required>
+                    <i class='bx bx-child' ></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Budget" name="budget" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="date" placeholder="Start Date" name="start_date" required>
+                    <i class='bx bxs-envelope' ></i>
+                </div>
+                <div class="input-box">
+                    <input type="date" placeholder="End Date" name="end_date" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Group Size" name="group_size" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Mode of Arrival" name="mode_of_arrival" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Mode of Transport" name="mode_of_transport" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Accommodation" name="accommodation" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Activities" name="activities" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Extra Information" name="extra_info" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <input type="submit" class="btn" value="Generate Itinerary"></input>
+            </form>
+        </div>
+    </body>
+</html>
