@@ -1,3 +1,8 @@
+from openai import OpenAI
+
+# openai access token goes here
+ACCESS_TOKEN = "sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+
 def createTripPrompt(prompt_inputs):
     prompt = f"""Imagine you are a travel guide. You have been tasked with suggesting a trip plan for a group of people. The group will 
 tell you their preferences and constraints and you will suggest a trip itinerary for them. The format of this itinerary is shared 
@@ -74,4 +79,19 @@ with estimated costs.
 
 
 def getHermesAIResponse(prompt):
+    client = OpenAI(api_key=ACCESS_TOKEN)
+
+    try:
+        chat_completion = client.chat.completions.create(
+            messages=[{
+            "role": "user",
+            "content": "say hallelujha",
+        }],
+        model="gpt-3.5-turbo",
+        )
+        print(chat_completion)
+    
+    except Exception as e:
+        print("Error:", e)
+
     return "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
